@@ -36,13 +36,14 @@ async def async_countdown(lifetime=5, verboze=False, time_seed=time_seed):
         print(f'Function N {this_func_index} game over')
 
 
-def show_info_infinitly(seed):
+def show_info_infinitly(seed=1):
     while len(times):
         print(times)
         time.sleep(seed)
 
 
-async def async_show_info_infinitly(seed):
-    while len(times):
+async def async_show_info_infinitly(seed=1):
+    # while len(times):
+    while True:
         print(times)
         await asyncio.sleep(seed)
